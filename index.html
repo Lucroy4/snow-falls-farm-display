@@ -35,7 +35,7 @@
       background-attachment: fixed;
     }
     body {
-      padding: 10px 12px 12px;
+      padding: 8px 12px 8px;
     }
     .top {
       display: flex;
@@ -50,7 +50,7 @@
     .top .center { color: #4d6a8a; }
     .brand { color: var(--cream); }
     h1 {
-      margin: 6px 0 8px;
+      margin: 4px 0 6px;
       text-align: center;
       font-weight: 500;
       font-size: clamp(26px, 5.4vw, 40px);
@@ -60,14 +60,14 @@
     .row {
       display: flex;
       gap: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .card {
       background: rgba(255, 252, 245, 0.9);
       box-shadow: 0 6px 20px rgba(29, 53, 87, 0.12);
       border: 1px solid var(--line);
       border-radius: 10px;
-      padding: 12px 14px 12px;
+      padding: 10px 12px 9px;
       backdrop-filter: blur(6px);
     }
     .outside { flex: 1.7; min-width: 0; }
@@ -82,15 +82,15 @@
       border-bottom: 2px solid var(--amber);
       display: inline-block;
       padding-bottom: 2px;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
     .outside-main {
       display: flex;
       align-items: center;
       gap: 14px;
     }
-    .icon { width: 88px; height: 88px; flex: 0 0 auto; border-radius: 16px; }
-    .week-day .wx { width: 52px; height: 52px; margin: 0 auto 2px; display: block; border-radius: 12px; }
+    .icon { width: 76px; height: 76px; flex: 0 0 auto; border-radius: 14px; }
+    .week-day .wx { width: 44px; height: 44px; margin: 0 auto 1px; display: block; border-radius: 10px; }
     .temp {
       font-size: clamp(56px, 11vw, 88px);
       line-height: 0.95;
@@ -101,8 +101,8 @@
       display: flex;
       justify-content: space-between;
       gap: 8px;
-      margin-top: 12px;
-      padding-top: 10px;
+      margin-top: 8px;
+      padding-top: 8px;
       border-top: 1px solid var(--line);
     }
     .stat { text-align: left; }
@@ -116,12 +116,12 @@
     }
     .stat b { font-weight: 500; font-size: 42px; }
     .note {
-      margin: 10px 0 0;
+      margin: 8px 0 0;
       color: var(--cream-dim);
       font-size: 20px;
     }
     .caption {
-      margin: 10px 0 0;
+      margin: 6px 0 0;
       color: #4d6a8a;
       font-size: 18px;
       font-family: Arial, Helvetica, sans-serif;
@@ -129,7 +129,7 @@
     .burny-boxes {
       display: flex;
       gap: 8px;
-      min-height: 150px;
+      min-height: 112px;
     }
     .dashbox {
       flex: 1;
@@ -192,9 +192,13 @@
       margin-top: 2px;
     }
     .river-spark {
-      max-width: none;
-      margin: 12px 0 0;
+      flex: 0 1 190px;
+      max-width: 200px;
+      min-width: 120px;
+      margin: 0 0 0 6px;
+      align-self: center;
     }
+    .river-spark .spark-meta { font-size: 11px; }
     .week {
       display: flex;
       flex-direction: row;
@@ -307,33 +311,16 @@
       <div class="stat"><span>Discharge</span><b>49.8 cfs</b></div>
       <div class="stat"><span>Trend</span><b>rising</b><div class="note" style="margin:4px 0 0">up 0.50 ft and 33.5 cfs over 24 hours</div></div>
       <div class="stat"><span>Flood warning</span><b>none</b></div>
+      <div class="spark river-spark" title="Little Androscoggin gage height over the last 24 hours">
+      <svg viewBox="0 0 640 58" width="100%" height="42" aria-hidden="true"><path d="M3.0,47.4L9.6,47.4L16.2,47.4L22.8,46.7L29.4,47.4L36.0,46.7L42.6,46.7L49.2,46.7L55.8,46.7L62.4,46.7L69.0,46.1L75.6,46.1L82.2,46.1L88.9,46.1L95.5,46.1L102.1,45.5L108.7,45.5L115.3,45.5L121.9,44.8L128.5,44.8L135.1,44.8L141.7,44.2L148.3,44.2L154.9,44.2L161.5,44.2L168.1,43.6L174.7,42.9L181.3,42.9L187.9,42.9L194.5,42.3L201.1,42.3L207.7,42.3L214.3,41.7L220.9,41.7L227.5,41.7L234.1,41.0L240.8,41.0L247.4,41.0L254.0,40.4L260.6,40.4L267.2,40.4L273.8,40.4L280.4,39.8L287.0,39.8L293.6,39.8L300.2,39.1L306.8,39.1L313.4,39.1L320.0,38.5L326.6,38.5L333.2,37.9L339.8,37.9L346.4,37.2L353.0,37.2L359.6,36.6L366.2,36.6L372.8,36.6L379.4,36.0L386.0,36.0L392.6,35.3L399.2,35.3L405.9,34.7L412.5,34.1L419.1,34.1L425.7,33.4L432.3,33.4L438.9,32.8L445.5,32.8L452.1,32.2L458.7,32.2L465.3,31.5L471.9,30.9L478.5,30.9L485.1,30.3L491.7,29.6L498.3,29.0L504.9,29.0L511.5,28.4L518.1,27.7L524.7,27.1L531.3,27.1L537.9,26.5L544.5,25.8L551.1,24.6L557.8,23.9L564.4,23.3L571.0,22.7L577.6,22.0L584.2,21.4L590.8,20.1L597.4,19.5L604.0,18.2L610.6,16.3L617.2,15.1L623.8,13.8L630.4,12.5L637.0,10.6L637.0,54.0L3.0,54.0Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,47.4L9.6,47.4L16.2,47.4L22.8,46.7L29.4,47.4L36.0,46.7L42.6,46.7L49.2,46.7L55.8,46.7L62.4,46.7L69.0,46.1L75.6,46.1L82.2,46.1L88.9,46.1L95.5,46.1L102.1,45.5L108.7,45.5L115.3,45.5L121.9,44.8L128.5,44.8L135.1,44.8L141.7,44.2L148.3,44.2L154.9,44.2L161.5,44.2L168.1,43.6L174.7,42.9L181.3,42.9L187.9,42.9L194.5,42.3L201.1,42.3L207.7,42.3L214.3,41.7L220.9,41.7L227.5,41.7L234.1,41.0L240.8,41.0L247.4,41.0L254.0,40.4L260.6,40.4L267.2,40.4L273.8,40.4L280.4,39.8L287.0,39.8L293.6,39.8L300.2,39.1L306.8,39.1L313.4,39.1L320.0,38.5L326.6,38.5L333.2,37.9L339.8,37.9L346.4,37.2L353.0,37.2L359.6,36.6L366.2,36.6L372.8,36.6L379.4,36.0L386.0,36.0L392.6,35.3L399.2,35.3L405.9,34.7L412.5,34.1L419.1,34.1L425.7,33.4L432.3,33.4L438.9,32.8L445.5,32.8L452.1,32.2L458.7,32.2L465.3,31.5L471.9,30.9L478.5,30.9L485.1,30.3L491.7,29.6L498.3,29.0L504.9,29.0L511.5,28.4L518.1,27.7L524.7,27.1L531.3,27.1L537.9,26.5L544.5,25.8L551.1,24.6L557.8,23.9L564.4,23.3L571.0,22.7L577.6,22.0L584.2,21.4L590.8,20.1L597.4,19.5L604.0,18.2L610.6,16.3L617.2,15.1L623.8,13.8L630.4,12.5L637.0,10.6" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <div class="spark-meta"><span>2.20</span><span>24 hr</span><span>2.78</span></div>
     </div>
-    <div class="spark river-spark" title="Little Androscoggin gage height over the last 24 hours">
-      <svg viewBox="0 0 640 58" width="100%" height="58" aria-hidden="true"><path d="M3.0,47.4L9.6,47.4L16.2,47.4L22.8,46.7L29.4,47.4L36.0,46.7L42.6,46.7L49.2,46.7L55.8,46.7L62.4,46.7L69.0,46.1L75.6,46.1L82.2,46.1L88.9,46.1L95.5,46.1L102.1,45.5L108.7,45.5L115.3,45.5L121.9,44.8L128.5,44.8L135.1,44.8L141.7,44.2L148.3,44.2L154.9,44.2L161.5,44.2L168.1,43.6L174.7,42.9L181.3,42.9L187.9,42.9L194.5,42.3L201.1,42.3L207.7,42.3L214.3,41.7L220.9,41.7L227.5,41.7L234.1,41.0L240.8,41.0L247.4,41.0L254.0,40.4L260.6,40.4L267.2,40.4L273.8,40.4L280.4,39.8L287.0,39.8L293.6,39.8L300.2,39.1L306.8,39.1L313.4,39.1L320.0,38.5L326.6,38.5L333.2,37.9L339.8,37.9L346.4,37.2L353.0,37.2L359.6,36.6L366.2,36.6L372.8,36.6L379.4,36.0L386.0,36.0L392.6,35.3L399.2,35.3L405.9,34.7L412.5,34.1L419.1,34.1L425.7,33.4L432.3,33.4L438.9,32.8L445.5,32.8L452.1,32.2L458.7,32.2L465.3,31.5L471.9,30.9L478.5,30.9L485.1,30.3L491.7,29.6L498.3,29.0L504.9,29.0L511.5,28.4L518.1,27.7L524.7,27.1L531.3,27.1L537.9,26.5L544.5,25.8L551.1,24.6L557.8,23.9L564.4,23.3L571.0,22.7L577.6,22.0L584.2,21.4L590.8,20.1L597.4,19.5L604.0,18.2L610.6,16.3L617.2,15.1L623.8,13.8L630.4,12.5L637.0,10.6L637.0,54.0L3.0,54.0Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,47.4L9.6,47.4L16.2,47.4L22.8,46.7L29.4,47.4L36.0,46.7L42.6,46.7L49.2,46.7L55.8,46.7L62.4,46.7L69.0,46.1L75.6,46.1L82.2,46.1L88.9,46.1L95.5,46.1L102.1,45.5L108.7,45.5L115.3,45.5L121.9,44.8L128.5,44.8L135.1,44.8L141.7,44.2L148.3,44.2L154.9,44.2L161.5,44.2L168.1,43.6L174.7,42.9L181.3,42.9L187.9,42.9L194.5,42.3L201.1,42.3L207.7,42.3L214.3,41.7L220.9,41.7L227.5,41.7L234.1,41.0L240.8,41.0L247.4,41.0L254.0,40.4L260.6,40.4L267.2,40.4L273.8,40.4L280.4,39.8L287.0,39.8L293.6,39.8L300.2,39.1L306.8,39.1L313.4,39.1L320.0,38.5L326.6,38.5L333.2,37.9L339.8,37.9L346.4,37.2L353.0,37.2L359.6,36.6L366.2,36.6L372.8,36.6L379.4,36.0L386.0,36.0L392.6,35.3L399.2,35.3L405.9,34.7L412.5,34.1L419.1,34.1L425.7,33.4L432.3,33.4L438.9,32.8L445.5,32.8L452.1,32.2L458.7,32.2L465.3,31.5L471.9,30.9L478.5,30.9L485.1,30.3L491.7,29.6L498.3,29.0L504.9,29.0L511.5,28.4L518.1,27.7L524.7,27.1L531.3,27.1L537.9,26.5L544.5,25.8L551.1,24.6L557.8,23.9L564.4,23.3L571.0,22.7L577.6,22.0L584.2,21.4L590.8,20.1L597.4,19.5L604.0,18.2L610.6,16.3L617.2,15.1L623.8,13.8L630.4,12.5L637.0,10.6" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
-      <div class="spark-meta"><span>2.20 ft</span><span>Gage height, last 24 hours</span><span>2.78 ft</span></div>
-    </div>
+</div>
     <p class="caption">USGS 01057000 near South Paris (NWS SPSM1), provisional, 1:15 PM ET.</p>
   </section>
 
-  <section class="card" style="margin-top:10px">
-    <div class="label">Recent and ahead</div>
-    <div class="days">
-      <div class="day">
-        <div>
-          <strong>Yesterday</strong>
-          <p>Damp with drizzle and rain, <span class="cycles">cycles 4</span></p>
-        </div>
-      </div>
-      <div class="day">
-        <div>
-          <strong>Mon</strong>
-          <p>Partly sunny, 51° / 34°</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="card" style="margin-top:10px">
+  <section class="card" style="margin-top:8px">
     <div class="label">7-day forecast</div>
     <div class="week">
       <div class="week-day">
