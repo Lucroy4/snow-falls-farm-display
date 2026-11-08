@@ -103,7 +103,8 @@
       gap: 14px;
     }
     .icon { width: 64px; height: 64px; flex: 0 0 auto; border-radius: 12px; }
-    .week-day .wx { width: 40px; height: 40px; margin: 0 auto 1px; display: block; border-radius: 10px; }
+    .week-panel .label { font-size: 22px; }
+    .week-day .wx { width: 48px; height: 48px; margin: 0 auto 2px; display: block; border-radius: 12px; }
     .temp {
       font-size: 72px;
       line-height: 0.95;
@@ -154,19 +155,20 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8px 6px;
+      padding: 10px 6px;
       color: var(--cream-dim);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
+      font-size: 24px;
     }
-    .dashbox .blank { font-size: 40px; color: var(--cream); margin-top: 2px; }
+    .dashbox .blank { font-size: 56px; color: var(--cream); margin-top: 4px; }
     .waiting {
       text-align: center;
       color: #4d6a8a;
-      font-size: 16px;
-      margin: 6px 0 0;
+      font-size: 20px;
+      margin: 8px 0 0;
       font-family: Arial, Helvetica, sans-serif;
     }
+    .burny .label { font-size: 22px; }
     .river-grid {
       display: flex;
       justify-content: space-between;
@@ -229,23 +231,23 @@
     .week-day .dname {
       color: var(--amber);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
     .week-day .hi {
-      font-size: 22px;
+      font-size: 28px;
       line-height: 1.1;
       margin-top: 2px;
     }
     .week-day .lo {
-      font-size: 16px;
+      font-size: 20px;
       color: var(--cream-dim);
     }
     .week-day .cond {
-      margin: 2px 0 0;
-      font-size: 13px;
+      margin: 3px 0 0;
+      font-size: 16px;
       color: var(--cream-dim);
       line-height: 1.2;
     }
@@ -259,7 +261,6 @@
     <div class="center">Updated Sunday, November 8, 4:05 PM ET</div>
     <div>Sunday, November 8</div>
   </div>
-  <h1>Yard is 44°F and calm under partly sunny skies after a little morning rain, with a mostly cloudy night down toward 35°.</h1>
 
   <div class="row">
     <section class="card outside">
@@ -324,7 +325,7 @@
   </section>
 
 
-  <section class="card" style="margin-top:6px; flex: 0 0 auto;">
+  <section class="card week-panel" style="margin-top:6px; flex: 0 0 auto;">
     <div class="label">7-day forecast</div>
     <div class="week">
       <div class="week-day">
