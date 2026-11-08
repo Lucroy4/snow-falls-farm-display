@@ -31,9 +31,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 1280px;
-      height: 800px;
-      padding: 6px 14px 6px;
+      width: 1700px;
+      height: 1100px;
+      padding: 8px 18px 10px;
       transform-origin: top left;
       overflow: hidden;
       display: flex;
@@ -54,8 +54,8 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 8px;
-      font-size: 15px;
+      gap: 11px;
+      font-size: 20px;
       color: var(--cream-dim);
       letter-spacing: 0.02em;
       text-shadow: 0 1px 4px rgba(255,255,255,0.65);
@@ -72,15 +72,15 @@
     }
     .row {
       display: flex;
-      gap: 10px;
-      margin-bottom: 6px;
+      gap: 14px;
+      margin-bottom: 8px;
     }
     .card {
       background: rgba(255, 252, 245, 0.9);
       box-shadow: 0 6px 20px rgba(29, 53, 87, 0.12);
       border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px 12px 6px;
+      border-radius: 13px;
+      padding: 11px 16px 8px;
       backdrop-filter: blur(6px);
     }
     .outside { flex: 1.7; min-width: 0; }
@@ -88,35 +88,35 @@
     .label {
       color: var(--amber);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       border-bottom: 2px solid var(--amber);
       display: inline-block;
-      padding-bottom: 1px;
-      margin-bottom: 4px;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
     }
     .outside-main {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
     }
-    .icon { width: 64px; height: 64px; flex: 0 0 auto; border-radius: 12px; }
-    .week-panel .label { font-size: 22px; }
-    .week-day .wx { width: 48px; height: 48px; margin: 0 auto 2px; display: block; border-radius: 12px; }
+    .icon { width: 85px; height: 85px; flex: 0 0 auto; border-radius: 16px; }
+    .week-panel .label { font-size: 30px; }
+    .week-day .wx { width: 64px; height: 64px; margin: 0 auto 3px; display: block; border-radius: 16px; }
     .temp {
-      font-size: 72px;
+      font-size: 96px;
       line-height: 0.95;
       font-weight: 500;
     }
-    .sub { color: var(--cream-dim); font-size: 17px; margin-top: 2px; }
+    .sub { color: var(--cream-dim); font-size: 23px; margin-top: 2px; }
     .stats {
       display: flex;
       justify-content: space-between;
-      gap: 8px;
-      margin-top: 6px;
-      padding-top: 6px;
+      gap: 11px;
+      margin-top: 8px;
+      padding-top: 8px;
       border-top: 1px solid var(--line);
     }
     .stat { text-align: left; }
@@ -124,55 +124,55 @@
       display: block;
       color: var(--amber);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
+      font-size: 21px;
       font-weight: 700;
       margin-bottom: 2px;
     }
-    .stat b { font-weight: 500; font-size: 34px; }
+    .stat b { font-weight: 500; font-size: 45px; }
     .note {
-      margin: 6px 0 0;
+      margin: 8px 0 0;
       color: var(--cream-dim);
-      font-size: 16px;
+      font-size: 21px;
     }
     .caption {
-      margin: 4px 0 0;
+      margin: 6px 0 0;
       color: #4d6a8a;
-      font-size: 15px;
+      font-size: 20px;
       font-family: Arial, Helvetica, sans-serif;
     }
     .burny-boxes {
       display: flex;
-      gap: 8px;
+      gap: 11px;
       min-height: 0;
       flex: 1;
     }
     .dashbox {
       flex: 1;
       border: 1.5px dashed var(--dash);
-      border-radius: 10px;
+      border-radius: 13px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 10px 6px;
+      padding: 14px 8px;
       color: var(--cream-dim);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 24px;
+      font-size: 32px;
     }
-    .dashbox .blank { font-size: 56px; color: var(--cream); margin-top: 4px; }
+    .dashbox .blank { font-size: 74px; color: var(--cream); margin-top: 6px; }
     .waiting {
       text-align: center;
       color: #4d6a8a;
-      font-size: 20px;
-      margin: 8px 0 0;
+      font-size: 27px;
+      margin: 10px 0 0;
       font-family: Arial, Helvetica, sans-serif;
     }
-    .burny .label { font-size: 22px; }
+    .burny .label { font-size: 30px; }
     .river-grid {
       display: flex;
       justify-content: space-between;
-      gap: 8px;
+      gap: 11px;
     }
     .river-grid .stat { flex: 1; }
     .days {
@@ -192,9 +192,9 @@
     .cycles { color: var(--amber-soft); }
 
     .spark {
-      flex: 1 1 140px;
-      min-width: 120px;
-      max-width: 240px;
+      flex: 1 1 186px;
+      min-width: 160px;
+      max-width: 320px;
       margin-left: auto;
     }
     .spark svg { display: block; }
@@ -204,17 +204,17 @@
       gap: 6px;
       color: var(--cream-dim);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 13px;
+      font-size: 17px;
       margin-top: 2px;
     }
     .river-spark {
-      flex: 0 1 190px;
-      max-width: 200px;
-      min-width: 120px;
-      margin: 0 0 0 6px;
+      flex: 0 1 250px;
+      max-width: 270px;
+      min-width: 160px;
+      margin: 0 0 0 8px;
       align-self: center;
     }
-    .river-spark .spark-meta { font-size: 11px; }
+    .river-spark .spark-meta { font-size: 15px; }
     .week {
       display: flex;
       flex-direction: row;
@@ -225,29 +225,29 @@
       flex: 1;
       min-width: 0;
       text-align: center;
-      padding: 2px 5px;
+      padding: 3px 7px;
     }
     .week-day + .week-day { border-left: 1px solid var(--line); }
     .week-day .dname {
       color: var(--amber);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
     .week-day .hi {
-      font-size: 28px;
+      font-size: 37px;
       line-height: 1.1;
-      margin-top: 2px;
+      margin-top: 3px;
     }
     .week-day .lo {
-      font-size: 20px;
+      font-size: 27px;
       color: var(--cream-dim);
     }
     .week-day .cond {
-      margin: 3px 0 0;
-      font-size: 16px;
+      margin: 4px 0 0;
+      font-size: 21px;
       color: var(--cream-dim);
       line-height: 1.2;
     }
@@ -277,7 +277,7 @@
           <div class="sub">Feels like 42°F<br>Mostly cloudy tonight</div>
         </div>
         <div class="spark" title="Yard temperature over the last 24 hours">
-          <svg viewBox="0 0 220 70" width="100%" height="70" aria-hidden="true"><path d="M3.0,10.0L6.0,10.0L8.9,10.0L11.9,10.0L14.9,15.6L17.9,15.6L20.8,15.6L23.8,15.6L26.8,15.6L29.8,15.6L32.7,15.6L35.7,15.6L38.7,15.6L41.6,15.6L44.6,15.6L47.6,15.6L50.6,15.6L53.5,15.6L56.5,15.6L59.5,15.6L62.4,15.6L65.4,21.1L68.4,21.1L71.4,21.1L74.3,26.7L77.3,26.7L80.3,26.7L83.2,26.7L86.2,26.7L89.2,26.7L92.2,32.2L95.1,32.2L98.1,32.2L101.1,37.8L104.1,37.8L107.0,43.3L110.0,43.3L113.0,43.3L115.9,48.9L118.9,48.9L121.9,48.9L124.9,54.4L127.8,54.4L130.8,54.4L133.8,54.4L136.8,48.9L139.7,54.4L142.7,60.0L145.7,60.0L148.6,60.0L151.6,54.4L154.6,48.9L157.6,48.9L160.5,43.3L163.5,43.3L166.5,37.8L169.4,37.8L172.4,37.8L175.4,32.2L178.4,26.7L181.3,21.1L184.3,21.1L187.3,21.1L190.2,21.1L193.2,21.1L196.2,15.6L199.2,15.6L202.1,21.1L205.1,21.1L208.1,21.1L211.1,21.1L214.0,21.1L217.0,32.2L217.0,66L3.0,66Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,10.0L6.0,10.0L8.9,10.0L11.9,10.0L14.9,15.6L17.9,15.6L20.8,15.6L23.8,15.6L26.8,15.6L29.8,15.6L32.7,15.6L35.7,15.6L38.7,15.6L41.6,15.6L44.6,15.6L47.6,15.6L50.6,15.6L53.5,15.6L56.5,15.6L59.5,15.6L62.4,15.6L65.4,21.1L68.4,21.1L71.4,21.1L74.3,26.7L77.3,26.7L80.3,26.7L83.2,26.7L86.2,26.7L89.2,26.7L92.2,32.2L95.1,32.2L98.1,32.2L101.1,37.8L104.1,37.8L107.0,43.3L110.0,43.3L113.0,43.3L115.9,48.9L118.9,48.9L121.9,48.9L124.9,54.4L127.8,54.4L130.8,54.4L133.8,54.4L136.8,48.9L139.7,54.4L142.7,60.0L145.7,60.0L148.6,60.0L151.6,54.4L154.6,48.9L157.6,48.9L160.5,43.3L163.5,43.3L166.5,37.8L169.4,37.8L172.4,37.8L175.4,32.2L178.4,26.7L181.3,21.1L184.3,21.1L187.3,21.1L190.2,21.1L193.2,21.1L196.2,15.6L199.2,15.6L202.1,21.1L205.1,21.1L208.1,21.1L211.1,21.1L214.0,21.1L217.0,32.2" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 220 70" width="100%" height="93" aria-hidden="true"><path d="M3.0,10.0L6.0,10.0L8.9,10.0L11.9,10.0L14.9,15.6L17.9,15.6L20.8,15.6L23.8,15.6L26.8,15.6L29.8,15.6L32.7,15.6L35.7,15.6L38.7,15.6L41.6,15.6L44.6,15.6L47.6,15.6L50.6,15.6L53.5,15.6L56.5,15.6L59.5,15.6L62.4,15.6L65.4,21.1L68.4,21.1L71.4,21.1L74.3,26.7L77.3,26.7L80.3,26.7L83.2,26.7L86.2,26.7L89.2,26.7L92.2,32.2L95.1,32.2L98.1,32.2L101.1,37.8L104.1,37.8L107.0,43.3L110.0,43.3L113.0,43.3L115.9,48.9L118.9,48.9L121.9,48.9L124.9,54.4L127.8,54.4L130.8,54.4L133.8,54.4L136.8,48.9L139.7,54.4L142.7,60.0L145.7,60.0L148.6,60.0L151.6,54.4L154.6,48.9L157.6,48.9L160.5,43.3L163.5,43.3L166.5,37.8L169.4,37.8L172.4,37.8L175.4,32.2L178.4,26.7L181.3,21.1L184.3,21.1L187.3,21.1L190.2,21.1L193.2,21.1L196.2,15.6L199.2,15.6L202.1,21.1L205.1,21.1L208.1,21.1L211.1,21.1L214.0,21.1L217.0,32.2L217.0,66L3.0,66Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,10.0L6.0,10.0L8.9,10.0L11.9,10.0L14.9,15.6L17.9,15.6L20.8,15.6L23.8,15.6L26.8,15.6L29.8,15.6L32.7,15.6L35.7,15.6L38.7,15.6L41.6,15.6L44.6,15.6L47.6,15.6L50.6,15.6L53.5,15.6L56.5,15.6L59.5,15.6L62.4,15.6L65.4,21.1L68.4,21.1L71.4,21.1L74.3,26.7L77.3,26.7L80.3,26.7L83.2,26.7L86.2,26.7L89.2,26.7L92.2,32.2L95.1,32.2L98.1,32.2L101.1,37.8L104.1,37.8L107.0,43.3L110.0,43.3L113.0,43.3L115.9,48.9L118.9,48.9L121.9,48.9L124.9,54.4L127.8,54.4L130.8,54.4L133.8,54.4L136.8,48.9L139.7,54.4L142.7,60.0L145.7,60.0L148.6,60.0L151.6,54.4L154.6,48.9L157.6,48.9L160.5,43.3L163.5,43.3L166.5,37.8L169.4,37.8L172.4,37.8L175.4,32.2L178.4,26.7L181.3,21.1L184.3,21.1L187.3,21.1L190.2,21.1L193.2,21.1L196.2,15.6L199.2,15.6L202.1,21.1L205.1,21.1L208.1,21.1L211.1,21.1L214.0,21.1L217.0,32.2" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
           <div class="spark-meta"><span>37°</span><span>24 hr</span><span>46°</span></div>
         </div>
       </div>
@@ -304,10 +304,10 @@
     <div class="river-grid">
       <div class="stat"><span>Gage height</span><b>2.90 ft</b></div>
       <div class="stat"><span>Discharge</span><b>73.7 cfs</b></div>
-      <div class="stat"><span>Trend</span><b>rising</b><div class="note" style="margin:4px 0 0">up 0.68 ft and 56.1 cfs over about 24 hours</div></div>
+      <div class="stat"><span>Trend</span><b>rising</b><div class="note" style="margin:6px 0 0">up 0.68 ft and 56.1 cfs over about 24 hours</div></div>
       <div class="stat"><span>Flood warning</span><b>none</b></div>
       <div class="spark river-spark" title="Little Androscoggin gage height over the last 24 hours">
-      <svg viewBox="0 0 640 58" width="100%" height="42" aria-hidden="true"><path d="M3.0,50.0L9.9,50.0L16.8,50.0L23.7,49.4L30.6,49.4L37.5,49.4L44.3,48.8L51.2,48.8L58.1,48.8L65.0,48.1L71.9,48.1L78.8,48.1L85.7,48.1L92.6,47.5L99.5,46.9L106.4,46.9L113.3,46.9L120.2,46.3L127.0,46.3L133.9,46.3L140.8,45.7L147.7,45.7L154.6,45.7L161.5,45.1L168.4,45.1L175.3,45.1L182.2,44.4L189.1,44.4L196.0,44.4L202.8,44.4L209.7,43.8L216.6,43.8L223.5,43.8L230.4,43.2L237.3,43.2L244.2,43.2L251.1,42.6L258.0,42.6L264.9,42.0L271.8,42.0L278.7,41.4L285.5,41.4L292.4,40.7L299.3,40.7L306.2,40.7L313.1,40.1L320.0,40.1L326.9,39.5L333.8,39.5L340.7,38.9L347.6,38.3L354.5,38.3L361.3,37.6L368.2,37.6L375.1,37.0L382.0,37.0L388.9,36.4L395.8,36.4L402.7,35.8L409.6,35.2L416.5,35.2L423.4,34.6L430.3,33.9L437.2,33.3L444.0,33.3L450.9,32.7L457.8,32.1L464.7,31.5L471.6,31.5L478.5,30.9L485.4,30.2L492.3,29.0L499.2,28.4L506.1,27.8L513.0,27.1L519.8,26.5L526.7,25.9L533.6,24.7L540.5,24.1L547.4,22.8L554.3,21.0L561.2,19.7L568.1,18.5L575.0,17.3L581.9,15.4L588.8,14.2L595.7,12.9L602.5,12.3L609.4,11.1L616.3,10.5L623.2,9.2L630.1,8.6L637.0,8.0L637.0,54L3.0,54Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,50.0L9.9,50.0L16.8,50.0L23.7,49.4L30.6,49.4L37.5,49.4L44.3,48.8L51.2,48.8L58.1,48.8L65.0,48.1L71.9,48.1L78.8,48.1L85.7,48.1L92.6,47.5L99.5,46.9L106.4,46.9L113.3,46.9L120.2,46.3L127.0,46.3L133.9,46.3L140.8,45.7L147.7,45.7L154.6,45.7L161.5,45.1L168.4,45.1L175.3,45.1L182.2,44.4L189.1,44.4L196.0,44.4L202.8,44.4L209.7,43.8L216.6,43.8L223.5,43.8L230.4,43.2L237.3,43.2L244.2,43.2L251.1,42.6L258.0,42.6L264.9,42.0L271.8,42.0L278.7,41.4L285.5,41.4L292.4,40.7L299.3,40.7L306.2,40.7L313.1,40.1L320.0,40.1L326.9,39.5L333.8,39.5L340.7,38.9L347.6,38.3L354.5,38.3L361.3,37.6L368.2,37.6L375.1,37.0L382.0,37.0L388.9,36.4L395.8,36.4L402.7,35.8L409.6,35.2L416.5,35.2L423.4,34.6L430.3,33.9L437.2,33.3L444.0,33.3L450.9,32.7L457.8,32.1L464.7,31.5L471.6,31.5L478.5,30.9L485.4,30.2L492.3,29.0L499.2,28.4L506.1,27.8L513.0,27.1L519.8,26.5L526.7,25.9L533.6,24.7L540.5,24.1L547.4,22.8L554.3,21.0L561.2,19.7L568.1,18.5L575.0,17.3L581.9,15.4L588.8,14.2L595.7,12.9L602.5,12.3L609.4,11.1L616.3,10.5L623.2,9.2L630.1,8.6L637.0,8.0" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 640 58" width="100%" height="56" aria-hidden="true"><path d="M3.0,50.0L9.9,50.0L16.8,50.0L23.7,49.4L30.6,49.4L37.5,49.4L44.3,48.8L51.2,48.8L58.1,48.8L65.0,48.1L71.9,48.1L78.8,48.1L85.7,48.1L92.6,47.5L99.5,46.9L106.4,46.9L113.3,46.9L120.2,46.3L127.0,46.3L133.9,46.3L140.8,45.7L147.7,45.7L154.6,45.7L161.5,45.1L168.4,45.1L175.3,45.1L182.2,44.4L189.1,44.4L196.0,44.4L202.8,44.4L209.7,43.8L216.6,43.8L223.5,43.8L230.4,43.2L237.3,43.2L244.2,43.2L251.1,42.6L258.0,42.6L264.9,42.0L271.8,42.0L278.7,41.4L285.5,41.4L292.4,40.7L299.3,40.7L306.2,40.7L313.1,40.1L320.0,40.1L326.9,39.5L333.8,39.5L340.7,38.9L347.6,38.3L354.5,38.3L361.3,37.6L368.2,37.6L375.1,37.0L382.0,37.0L388.9,36.4L395.8,36.4L402.7,35.8L409.6,35.2L416.5,35.2L423.4,34.6L430.3,33.9L437.2,33.3L444.0,33.3L450.9,32.7L457.8,32.1L464.7,31.5L471.6,31.5L478.5,30.9L485.4,30.2L492.3,29.0L499.2,28.4L506.1,27.8L513.0,27.1L519.8,26.5L526.7,25.9L533.6,24.7L540.5,24.1L547.4,22.8L554.3,21.0L561.2,19.7L568.1,18.5L575.0,17.3L581.9,15.4L588.8,14.2L595.7,12.9L602.5,12.3L609.4,11.1L616.3,10.5L623.2,9.2L630.1,8.6L637.0,8.0L637.0,54L3.0,54Z" fill="rgba(42,157,143,0.22)"/><path d="M3.0,50.0L9.9,50.0L16.8,50.0L23.7,49.4L30.6,49.4L37.5,49.4L44.3,48.8L51.2,48.8L58.1,48.8L65.0,48.1L71.9,48.1L78.8,48.1L85.7,48.1L92.6,47.5L99.5,46.9L106.4,46.9L113.3,46.9L120.2,46.3L127.0,46.3L133.9,46.3L140.8,45.7L147.7,45.7L154.6,45.7L161.5,45.1L168.4,45.1L175.3,45.1L182.2,44.4L189.1,44.4L196.0,44.4L202.8,44.4L209.7,43.8L216.6,43.8L223.5,43.8L230.4,43.2L237.3,43.2L244.2,43.2L251.1,42.6L258.0,42.6L264.9,42.0L271.8,42.0L278.7,41.4L285.5,41.4L292.4,40.7L299.3,40.7L306.2,40.7L313.1,40.1L320.0,40.1L326.9,39.5L333.8,39.5L340.7,38.9L347.6,38.3L354.5,38.3L361.3,37.6L368.2,37.6L375.1,37.0L382.0,37.0L388.9,36.4L395.8,36.4L402.7,35.8L409.6,35.2L416.5,35.2L423.4,34.6L430.3,33.9L437.2,33.3L444.0,33.3L450.9,32.7L457.8,32.1L464.7,31.5L471.6,31.5L478.5,30.9L485.4,30.2L492.3,29.0L499.2,28.4L506.1,27.8L513.0,27.1L519.8,26.5L526.7,25.9L533.6,24.7L540.5,24.1L547.4,22.8L554.3,21.0L561.2,19.7L568.1,18.5L575.0,17.3L581.9,15.4L588.8,14.2L595.7,12.9L602.5,12.3L609.4,11.1L616.3,10.5L623.2,9.2L630.1,8.6L637.0,8.0" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
       <div class="spark-meta"><span>2.22</span><span>24 hr</span><span>2.90</span></div>
     </div>
 </div>
@@ -315,7 +315,7 @@
   </section>
 
 
-  <section class="card week-panel" style="margin-top:6px; flex: 0 0 auto;">
+  <section class="card week-panel" style="margin-top:8px; flex: 0 0 auto;">
     <div class="label">7-day forecast</div>
     <div class="week">
       <div class="week-day">
@@ -495,7 +495,7 @@
   </div>
   <script>
     (function () {
-      var W = 1280, H = 800;
+      var W = 1700, H = 1100;
       var stage = document.querySelector(".stage");
       function fit() {
         var sx = window.innerWidth / W;
