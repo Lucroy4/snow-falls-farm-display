@@ -237,7 +237,88 @@
       line-height: 1.2;
     }
 
+
+    .page-body {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+      margin-top: 8px;
+    }
+    .main-col {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .main-col > .row { margin-bottom: 8px; }
+    .forecast-rail {
+      flex: 0 0 240px;
+      width: 240px;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 10px 10px 8px;
+    }
+    .forecast-rail .week {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      flex: 1;
+    }
+    .forecast-rail .week-day {
+      flex: 1 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2px 8px;
+      text-align: left;
+      padding: 8px 2px;
+      min-width: 0;
+    }
+    .forecast-rail .week-day + .week-day {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+    }
+    .forecast-rail .week-day .wx {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      flex: 0 0 auto;
+    }
+    .forecast-rail .week-day .dname {
+      flex: 1 1 auto;
+      font-size: 14px;
+    }
+    .forecast-rail .week-day .hi {
+      font-size: 22px;
+      margin-top: 0;
+      line-height: 1.1;
+    }
+    .forecast-rail .week-day .lo {
+      font-size: 16px;
+      margin-left: 2px;
+    }
+    .forecast-rail .week-day .cond {
+      flex: 1 1 100%;
+      margin: 0 0 0 48px;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .forecast-rail .caption {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
     @media (max-width: 700px) {
+      .page-body { flex-direction: column; }
+      .forecast-rail {
+        flex: 1 1 auto;
+        width: auto;
+        max-width: none;
+      }
       .row, .river-grid, .days { flex-direction: column; }
       .day + .day { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 10px; }
       .temp { font-size: 68px; }
@@ -252,6 +333,8 @@
     <div>Monday, November 9</div>
   </div>
 
+  <div class="page-body">
+  <div class="main-col">
   <div class="row">
     <section class="card outside">
       <div class="label">Outside</div>
@@ -302,12 +385,13 @@
 </div>
     <p class="caption">USGS 01057000 near South Paris (NWS SPSM1), provisional, 1:15 PM ET.</p>
   </section>
+  </div>
 
-
-  <section class="card week-panel" style="margin-top:8px; flex: 0 0 auto;">
-    <div class="label">7-day forecast</div>
+  <section class="card forecast-rail">
+    <div class="label">5-day forecast</div>
     <div class="week">
       <div class="week-day">
+
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
       <circle cx="18" cy="16" r="8" fill="#FFD166"/>
       <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
@@ -330,6 +414,7 @@
         <p class="cond">Partly sunny</p>
       </div>
       <div class="week-day">
+
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
       <circle cx="18" cy="16" r="8" fill="#FFD166"/>
       <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
@@ -352,6 +437,7 @@
         <p class="cond">Cloudy, slight chance showers</p>
       </div>
       <div class="week-day">
+
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
       <circle cx="18" cy="16" r="8" fill="#FFD166"/>
       <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
@@ -374,6 +460,7 @@
         <p class="cond">Mostly sunny</p>
       </div>
       <div class="week-day">
+
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
       <circle cx="18" cy="16" r="8" fill="#FFD166"/>
       <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
@@ -396,6 +483,7 @@
         <p class="cond">Partly sunny, slight chance showers</p>
       </div>
       <div class="week-day">
+
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8FB8D0"/>
       <ellipse cx="34" cy="30" rx="16" ry="10" fill="#E4EEF5"/>
       <ellipse cx="24" cy="32" rx="10" ry="8" fill="#F4F8FB"/>
@@ -421,57 +509,9 @@
         <div class="lo">29°</div>
         <p class="cond">Chance light snow</p>
       </div>
-      <div class="week-day">
-        <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8FB8D0"/>
-      <ellipse cx="34" cy="30" rx="16" ry="10" fill="#E4EEF5"/>
-      <ellipse cx="24" cy="32" rx="10" ry="8" fill="#F4F8FB"/>
-      <ellipse cx="42" cy="32" rx="11" ry="9" fill="#D5E3EE"/>
-      <ellipse cx="33" cy="26" rx="9" ry="7" fill="#F7FBFF"/>
-      <g fill="#3A86FF">
-        <path d="M28 44 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
-        <path d="M38 46 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
-      </g>
-      <g fill="#FFFFFF" stroke="#BDE0FE" stroke-width="0.6">
-        <circle cx="24" cy="50" r="2.2"/>
-        <circle cx="33" cy="54" r="1.8"/>
-        <circle cx="42" cy="49" r="2"/>
-      </g>
-      <g stroke="#F8FBFF" stroke-width="1.2" stroke-linecap="round">
-        <line x1="24" y1="47.5" x2="24" y2="52.5"/>
-        <line x1="21.6" y1="50" x2="26.4" y2="50"/>
-        <line x1="42" y1="46.6" x2="42" y2="51.4"/>
-        <line x1="39.8" y1="49" x2="44.2" y2="49"/>
-      </g><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
-        <div class="dname">Sat</div>
-        <div class="hi">41°</div>
-        <div class="lo">30°</div>
-        <p class="cond">Chance rain / snow</p>
-      </div>
-      <div class="week-day">
-        <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
-      <circle cx="18" cy="16" r="8" fill="#FFD166"/>
-      <g stroke="#FFD166" stroke-width="2" stroke-linecap="round">
-        <line x1="18" y1="4" x2="18" y2="7"/>
-        <line x1="18" y1="25" x2="18" y2="28"/>
-        <line x1="6" y1="16" x2="9" y2="16"/>
-        <line x1="27" y1="16" x2="30" y2="16"/>
-        <line x1="9.5" y1="7.5" x2="11.6" y2="9.6"/>
-        <line x1="24.4" y1="22.4" x2="26.5" y2="24.5"/>
-        <line x1="9.5" y1="24.5" x2="11.6" y2="22.4"/>
-        <line x1="24.4" y1="9.6" x2="26.5" y2="7.5"/>
-      </g>
-      <ellipse cx="34" cy="32" rx="16" ry="10" fill="#F7FBFF"/>
-      <ellipse cx="24" cy="34" rx="10" ry="8" fill="#FFFFFF"/>
-      <ellipse cx="42" cy="34" rx="11" ry="9" fill="#E8F4FC"/>
-      <ellipse cx="33" cy="28" rx="9" ry="7" fill="#FFFFFF"/><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
-        <div class="dname">Sun</div>
-        <div class="hi">44°</div>
-        <div class="lo">28°</div>
-        <p class="cond">Chance light rain</p>
-      </div>
     </div>
     <p class="caption">National Weather Service forecast for West Paris.</p>
   </section>
-
+  </div>
 </body>
 </html>
