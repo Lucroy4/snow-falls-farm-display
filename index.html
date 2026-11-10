@@ -72,7 +72,47 @@
       backdrop-filter: blur(6px);
     }
     .outside { flex: 1.7; min-width: 0; }
-    .burny { flex: 1; min-width: 0; }
+    .burny { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+    .burny-split {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 8px;
+      min-height: 0;
+    }
+    .burny-half {
+      flex: 1 1 0;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .burny-half + .burny-half {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+    .burny-half .label { margin-bottom: 4px; }
+    .burny-half .burny-boxes {
+      flex: 1;
+      min-height: 0;
+    }
+    .dashbox .blank.wood-val {
+      font-size: 22px;
+      line-height: 1.15;
+      padding: 0 2px;
+      white-space: nowrap;
+    }
+    .dashbox .blank.river-val {
+      font-size: 36px;
+      line-height: 1.1;
+    }
+    .wood-sub {
+      font-size: 13px;
+      color: #4d6a8a;
+      margin-top: 4px;
+      line-height: 1.2;
+      font-family: Arial, Helvetica, sans-serif;
+    }
     .label {
       color: var(--amber);
       font-family: Arial, Helvetica, sans-serif;
@@ -251,7 +291,7 @@
       flex-direction: column;
       gap: 0;
     }
-    .main-col > .row { margin-bottom: 8px; }
+    .main-col > .row { margin-bottom: 0; }
     .forecast-rail {
       flex: 0 0 240px;
       width: 240px;
@@ -374,32 +414,29 @@
     </section>
 
     <section class="card burny">
-      <div class="label">Burny</div>
-      <div class="burny-boxes">
-        <div class="dashbox">Cycles yesterday<div class="blank">4</div></div>
-        <div class="dashbox">Predicted today<div class="blank">4</div></div>
+      <div class="burny-split">
+        <div class="burny-half">
+          <div class="label">Burny</div>
+          <div class="burny-boxes">
+            <div class="dashbox">Wood today (projected)<div class="blank wood-val" id="wood-today">12–13 pieces</div><div class="wood-sub" id="wood-note">5 loaded so far · estimate</div></div>
+            <div class="dashbox">Since Nov 6 (recorded)<div class="blank wood-val" id="wood-season">42 pieces</div></div>
+          </div>
+        </div>
+        <div class="burny-half">
+          <div class="label">Little Androscoggin</div>
+          <div class="burny-boxes">
+            <div class="dashbox">Gage height<div class="blank river-val">2.68 ft</div></div>
+            <div class="dashbox">Trend<div class="blank river-val">falling</div></div>
+          </div>
+        </div>
       </div>
-      <p class="waiting">Yesterday measured · today estimated</p>
     </section>
   </div>
 
-  <section class="card" style="flex: 0 0 auto;">
-    <div class="label">Little Androscoggin</div>
-    <div class="river-grid">
-      <div class="stat"><span>Gage height</span><b>2.68 ft</b></div>
-      <div class="stat"><span>Trend</span><b>falling</b></div>
-      <div class="stat"><span>Trend Insight</span><div class="note" style="margin:6px 0 0">down 0.18 ft and 19.8 cfs over about 24 hours</div></div>
-      <div class="spark river-spark" title="Little Androscoggin gage height over the last 24 hours">
-      <svg viewBox="0 0 640 58" width="100%" height="42" aria-hidden="true"><path d="M29.4,6.0L36.0,8.4L42.6,8.4L49.2,8.4L55.8,8.4L62.4,10.9L69.0,10.9L75.6,10.9L82.2,10.9L88.9,10.9L95.5,13.3L102.1,13.3L108.7,13.3L115.3,13.3L121.9,13.3L128.5,15.8L135.1,15.8L141.7,15.8L148.3,15.8L154.9,15.8L161.5,18.2L168.1,18.2L174.7,18.2L181.3,18.2L187.9,18.2L194.5,20.7L201.1,20.7L207.7,20.7L214.3,20.7L220.9,20.7L227.5,23.1L234.1,23.1L240.8,23.1L247.4,23.1L254.0,23.1L260.6,23.1L267.2,25.6L273.8,25.6L280.4,25.6L287.0,25.6L293.6,25.6L300.2,28.0L306.8,28.0L313.4,28.0L320.0,28.0L326.6,28.0L333.2,30.4L339.8,30.4L346.4,30.4L353.0,30.4L359.6,32.9L366.2,32.9L372.8,32.9L379.4,32.9L386.0,35.3L392.6,35.3L399.2,35.3L405.9,35.3L412.5,35.3L419.1,35.3L425.7,35.3L432.3,37.8L438.9,37.8L445.5,37.8L452.1,37.8L458.7,37.8L465.3,40.2L471.9,40.2L478.5,40.2L485.1,40.2L491.7,40.2L498.3,40.2L504.9,40.2L511.5,42.7L518.1,42.7L524.7,42.7L531.3,42.7L537.9,42.7L544.5,42.7L551.1,45.1L557.8,45.1L564.4,45.1L571.0,45.1L577.6,45.1L584.2,45.1L590.8,45.1L597.4,47.6L604.0,47.6L610.6,47.6L617.2,47.6L623.8,47.6L630.4,47.6L637.0,50.0L637.0,56L29.4,56Z" fill="rgba(42,157,143,0.22)"/><path d="M29.4,6.0L36.0,8.4L42.6,8.4L49.2,8.4L55.8,8.4L62.4,10.9L69.0,10.9L75.6,10.9L82.2,10.9L88.9,10.9L95.5,13.3L102.1,13.3L108.7,13.3L115.3,13.3L121.9,13.3L128.5,15.8L135.1,15.8L141.7,15.8L148.3,15.8L154.9,15.8L161.5,18.2L168.1,18.2L174.7,18.2L181.3,18.2L187.9,18.2L194.5,20.7L201.1,20.7L207.7,20.7L214.3,20.7L220.9,20.7L227.5,23.1L234.1,23.1L240.8,23.1L247.4,23.1L254.0,23.1L260.6,23.1L267.2,25.6L273.8,25.6L280.4,25.6L287.0,25.6L293.6,25.6L300.2,28.0L306.8,28.0L313.4,28.0L320.0,28.0L326.6,28.0L333.2,30.4L339.8,30.4L346.4,30.4L353.0,30.4L359.6,32.9L366.2,32.9L372.8,32.9L379.4,32.9L386.0,35.3L392.6,35.3L399.2,35.3L405.9,35.3L412.5,35.3L419.1,35.3L425.7,35.3L432.3,37.8L438.9,37.8L445.5,37.8L452.1,37.8L458.7,37.8L465.3,40.2L471.9,40.2L478.5,40.2L485.1,40.2L491.7,40.2L498.3,40.2L504.9,40.2L511.5,42.7L518.1,42.7L524.7,42.7L531.3,42.7L537.9,42.7L544.5,42.7L551.1,45.1L557.8,45.1L564.4,45.1L571.0,45.1L577.6,45.1L584.2,45.1L590.8,45.1L597.4,47.6L604.0,47.6L610.6,47.6L617.2,47.6L623.8,47.6L630.4,47.6L637.0,50.0" fill="none" stroke="#2a9d8f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
-      <div class="spark-meta"><span>2.68</span><span>24 hr</span><span>2.86</span></div>
-    </div>
-</div>
-    <p class="caption">USGS 01057000 near South Paris (NWS SPSM1), provisional data, 2:15 PM ET.</p>
-  </section>
   </div>
 
   <section class="card forecast-rail">
-    <div class="label">5-day forecast</div>
+    <div class="label">4-day forecast</div>
     <div class="week">
       <div class="week-day">
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#A9BCD0"/>
@@ -485,34 +522,7 @@
         <div class="hi">39°</div>
         <div class="lo">29°</div>
         <p class="cond">Light snow likely</p>
-      </div>
-      <div class="week-day">
-        <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8FB8D0"/>
-      <ellipse cx="34" cy="30" rx="16" ry="10" fill="#E4EEF5"/>
-      <ellipse cx="24" cy="32" rx="10" ry="8" fill="#F4F8FB"/>
-      <ellipse cx="42" cy="32" rx="11" ry="9" fill="#D5E3EE"/>
-      <ellipse cx="33" cy="26" rx="9" ry="7" fill="#F7FBFF"/>
-      <g fill="#3A86FF">
-        <path d="M28 44 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
-        <path d="M38 46 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
-      </g>
-      <g fill="#FFFFFF" stroke="#BDE0FE" stroke-width="0.6">
-        <circle cx="24" cy="50" r="2.2"/>
-        <circle cx="33" cy="54" r="1.8"/>
-        <circle cx="42" cy="49" r="2"/>
-      </g>
-      <g stroke="#F8FBFF" stroke-width="1.2" stroke-linecap="round">
-        <line x1="24" y1="47.5" x2="24" y2="52.5"/>
-        <line x1="21.6" y1="50" x2="26.4" y2="50"/>
-        <line x1="42" y1="46.6" x2="42" y2="51.4"/>
-        <line x1="39.8" y1="49" x2="44.2" y2="49"/>
-      </g><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
-        <div class="dname">Sat</div>
-        <div class="hi">40°</div>
-        <div class="lo">30°</div>
-        <p class="cond">Chance rain and snow</p>
-      </div>
-    </div>
+      </div>    </div>
     <p class="caption">National Weather Service forecast for West Paris.</p>
   </section>
   </div>
