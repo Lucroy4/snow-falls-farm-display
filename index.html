@@ -364,12 +364,24 @@
       .temp { font-size: 68px; }
       body { padding: 8px; }
     }
+    /* v3 cleanup */
+    .burny-half .label { margin-bottom: 6px; align-self: flex-start; }
+    .burny-half .burny-boxes { min-height: 0; flex: 1 1 0; gap: 8px; }
+    .burny-half .dashbox { padding: 6px 4px; min-height: 0; justify-content: center; gap: 2px; }
+    .wood-label { font-size: 20px; font-weight: 700; color: var(--cream-dim); line-height: 1.1; }
+    .dashbox .blank.wood-val { font-size: 40px; font-weight: 600; line-height: 1.05; margin-top: 2px; white-space: nowrap; }
+    .dashbox .blank.river-val { font-size: 34px; line-height: 1.05; margin-top: 2px; }
+    .stats { justify-content: stretch; gap: 0; }
+    .stat { flex: 1; text-align: center; padding: 2px 6px; }
+    .stat + .stat { border-left: 1px solid var(--line); }
+    .stat span { font-size: 17px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px; }
+    .stat b { font-size: 32px; white-space: nowrap; }
   </style>
 </head>
 <body>
   <div class="top">
     <div class="brand">Snow Falls Farm — West Paris, ME</div>
-    <div class="center">Updated Tuesday, November 10, 6:03 PM ET</div>
+    <div class="center">Updated Tuesday, November 10, 9:40 PM ET</div>
     <div>Tuesday, November 10</div>
   </div>
 
@@ -394,7 +406,7 @@
         </div>
       </div>
       <div class="stats">
-        <div class="stat"><span>Today</span><b>High 54° so far</b></div>
+        <div class="stat"><span>Today</span><b>High 54°</b></div>
         <div class="stat"><span>Humidity</span><b>84%</b></div>
         <div class="stat"><span>Wind</span><b>0 mph NE</b></div>
       </div>
@@ -407,15 +419,15 @@
         <div class="burny-half">
           <div class="label">Burny</div>
           <div class="burny-boxes">
-            <div class="dashbox">Wood today (projected)<div class="blank wood-val" id="wood-today">12–13 pieces</div><div class="wood-sub" id="wood-note">5 loaded so far · estimate</div></div>
-            <div class="dashbox">Season so far (est.)<div class="blank wood-val" id="wood-season">~345 pieces</div><div class="wood-sub" id="wood-season-note">since Oct 12 · range 305–385</div></div>
+            <div class="dashbox wood-box"><div class="wood-label">Wood Today</div><div class="blank wood-val" id="wood-today">12–13 pcs</div></div>
+            <div class="dashbox wood-box"><div class="wood-label">Total</div><div class="blank wood-val" id="wood-season">345 pcs</div></div>
           </div>
         </div>
         <div class="burny-half">
           <div class="label">Little Androscoggin</div>
           <div class="burny-boxes">
-            <div class="dashbox">Gage height<div class="blank river-val">2.67 ft</div></div>
-            <div class="dashbox">Trend<div class="blank river-val">falling</div></div>
+            <div class="dashbox"><div class="wood-label">Gage height</div><div class="blank river-val">2.67 ft</div></div>
+            <div class="dashbox"><div class="wood-label">Trend</div><div class="blank river-val">falling</div></div>
           </div>
         </div>
       </div>
@@ -427,17 +439,6 @@
   <section class="card forecast-rail">
     <div class="label">4-day forecast</div>
     <div class="week">
-      <div class="week-day">
-        <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#A9BCD0"/>
-      <ellipse cx="34" cy="30" rx="18" ry="11" fill="#D9E2EC"/>
-      <ellipse cx="22" cy="33" rx="11" ry="9" fill="#E8EEF4"/>
-      <ellipse cx="44" cy="33" rx="12" ry="10" fill="#C9D5E2"/>
-      <ellipse cx="33" cy="25" rx="10" ry="8" fill="#F1F5F9"/><ellipse cx="32" cy="62" rx="28" ry="8" fill="#7FA77F"/></svg>
-        <div class="dname">Tue</div>
-        <div class="hi">49°</div>
-        <div class="lo">35°</div>
-        <p class="cond">Mostly cloudy</p>
-      </div>
       <div class="week-day">
         <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8ED1F0"/>
       <circle cx="18" cy="16" r="8" fill="#FFD166"/>
@@ -456,7 +457,7 @@
       <ellipse cx="42" cy="34" rx="11" ry="9" fill="#E8F4FC"/>
       <ellipse cx="33" cy="28" rx="9" ry="7" fill="#FFFFFF"/><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
         <div class="dname">Wed</div>
-        <div class="hi">45°</div>
+        <div class="hi">47°</div>
         <div class="lo">28°</div>
         <p class="cond">Partly sunny</p>
       </div>
@@ -482,7 +483,7 @@
         <line x1="39.8" y1="49" x2="44.2" y2="49"/>
       </g><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
         <div class="dname">Thu</div>
-        <div class="hi">43°</div>
+        <div class="hi">44°</div>
         <div class="lo">29°</div>
         <p class="cond">Chance rain and snow</p>
       </div>
@@ -508,10 +509,37 @@
         <line x1="39.8" y1="49" x2="44.2" y2="49"/>
       </g><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
         <div class="dname">Fri</div>
-        <div class="hi">39°</div>
-        <div class="lo">29°</div>
+        <div class="hi">41°</div>
+        <div class="lo">28°</div>
         <p class="cond">Light snow likely</p>
-      </div>    </div>
+      </div>
+      <div class="week-day">
+        <svg class="wx" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#8FB8D0"/>
+      <ellipse cx="34" cy="30" rx="16" ry="10" fill="#E4EEF5"/>
+      <ellipse cx="24" cy="32" rx="10" ry="8" fill="#F4F8FB"/>
+      <ellipse cx="42" cy="32" rx="11" ry="9" fill="#D5E3EE"/>
+      <ellipse cx="33" cy="26" rx="9" ry="7" fill="#F7FBFF"/>
+      <g fill="#3A86FF">
+        <path d="M28 44 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
+        <path d="M38 46 q-1 5 0 8 q1-1.5 2 0 q1-5 0-8 z"/>
+      </g>
+      <g fill="#FFFFFF" stroke="#BDE0FE" stroke-width="0.6">
+        <circle cx="24" cy="50" r="2.2"/>
+        <circle cx="33" cy="54" r="1.8"/>
+        <circle cx="42" cy="49" r="2"/>
+      </g>
+      <g stroke="#F8FBFF" stroke-width="1.2" stroke-linecap="round">
+        <line x1="24" y1="47.5" x2="24" y2="52.5"/>
+        <line x1="21.6" y1="50" x2="26.4" y2="50"/>
+        <line x1="42" y1="46.6" x2="42" y2="51.4"/>
+        <line x1="39.8" y1="49" x2="44.2" y2="49"/>
+      </g><ellipse cx="32" cy="62" rx="28" ry="8" fill="#8FCB81"/></svg>
+        <div class="dname">Sat</div>
+        <div class="hi">41°</div>
+        <div class="lo">29°</div>
+        <p class="cond">Chance rain and snow</p>
+      </div>
+    </div>
     <p class="caption">National Weather Service forecast for West Paris.</p>
   </section>
   </div>
